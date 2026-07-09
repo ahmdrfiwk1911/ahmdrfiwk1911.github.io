@@ -95,7 +95,7 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    display: inline-block;
+    display: inline;
 }
 
 .section-padding {
@@ -454,6 +454,7 @@ a {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
     font-size: 0.85rem;
     line-height: 1.5;
+    overflow-x: auto;
 }
 
 .keyword { color: #f43f5e; }
@@ -1193,6 +1194,10 @@ svg.lucide {
         padding: 5rem 0;
     }
 
+    .nav-socials .social-icon-btn {
+        display: none;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1201,6 +1206,11 @@ svg.lucide {
 
     .hero-content {
         align-items: center;
+    }
+
+    .hero-subtitle {
+        height: auto;
+        min-height: 3rem;
     }
 
     .hero-description {
@@ -1276,11 +1286,16 @@ svg.lucide {
     }
 
     .hero-title {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     .hero-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
+    }
+
+    .code-card-body {
+        font-size: 0.75rem;
+        padding: 1rem;
     }
 
     .bio-details {
