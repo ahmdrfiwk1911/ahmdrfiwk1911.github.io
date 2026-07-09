@@ -165,11 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Disable button and show loading state
             submitBtn.disabled = true;
-            submitBtn.innerHTML = 'Mengirim... <span class="spinner"></span>';
+            submitBtn.innerHTML = 'Sending... <span class="spinner"></span>';
             
             // Simulate API request delay
             setTimeout(() => {
-                formStatus.textContent = 'Pesan Anda berhasil dikirim! Terima kasih.';
+                formStatus.textContent = 'Your message has been sent successfully! Thank you.';
                 formStatus.className = 'form-status success';
                 
                 // Clear form fields
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Re-enable button
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Kirim Pesan <i data-lucide="send"></i>';
+                submitBtn.innerHTML = 'Send Message <i data-lucide="send"></i>';
                 lucide.createIcons();
 
                 // Clear message after 5 seconds
