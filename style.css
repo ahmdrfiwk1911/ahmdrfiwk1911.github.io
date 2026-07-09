@@ -1008,9 +1008,12 @@ a {
    CONTACT SECTION
 -------------------------------------------------- */
 .contact-container {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-desc {
@@ -1022,14 +1025,18 @@ a {
 .contact-methods {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.8rem;
     margin-bottom: 3rem;
+    width: 100%;
 }
 
 .contact-method-item {
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    text-align: left;
+    width: fit-content;
 }
 
 .contact-method-icon {
@@ -1061,6 +1068,7 @@ a {
 
 .social-links-footer {
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
