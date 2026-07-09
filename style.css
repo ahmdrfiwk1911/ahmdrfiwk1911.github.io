@@ -457,6 +457,20 @@ a {
     overflow-x: auto;
 }
 
+.code-card-body pre {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+    display: block;
+}
+
+.code-card-body code {
+    font-family: inherit;
+    white-space: pre;
+}
+
 .keyword { color: #f43f5e; }
 .string { color: #10b981; }
 .type { color: #3b82f6; }
