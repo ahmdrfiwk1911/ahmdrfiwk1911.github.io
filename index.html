@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Refi Widi Katibin | Portofolio Software Engineer</title>
+    <meta name="description" content="Portofolio Ahmad Refi Widi Katibin - Software Engineer & Full-Stack Developer spesialis HTML/CSS, Python, dan JavaScript.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mouse Glow Effect -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>AR<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#skills" class="nav-link">Keahlian</a>
+                <a href="#experience" class="nav-link">Pengalaman</a>
+                <a href="#projects" class="nav-link">Proyek</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </nav>
+            
+            <div class="nav-socials">
+                <a href="https://github.com/mamad6969-hs" target="_blank" aria-label="GitHub" class="social-icon-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/ahmdrfiwk/" target="_blank" aria-label="LinkedIn" class="social-icon-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://www.instagram.com/ahmdrfiwk/" target="_blank" aria-label="Instagram" class="social-icon-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-new">
+                        <span class="badge-dot"></span> Available for Opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Halo, Saya <span class="gradient-text">Ahmad Refi Widi Katibin</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Saya seorang <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Developer yang berfokus pada pengembangan frontend & backend (Full-Stack). Suka menulis kode yang bersih, efisien, dan skalabel dengan HTML/CSS, Python, dan JavaScript.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            Lihat Proyek <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Animated Coding Card -->
+                <div class="hero-graphic">
+                    <div class="code-card">
+                        <div class="code-card-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-file-name">developer.py</span>
+                        </div>
+                        <div class="code-card-body">
+                            <pre><code><span class="keyword">class</span> <span class="type">Developer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.name = <span class="string">"Ahmad Refi Widi Katibin"</span>
+        self.focus = [<span class="string">"Frontend"</span>, <span class="string">"Backend"</span>]
+        self.languages = [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"Python"</span>]
+        self.passionate = <span class="keyword">True</span>
+
+    <span class="keyword">def</span> <span class="function">build_web</span>(self):
+        print(<span class="string">"Building Full-Stack apps!"</span>)
+
+refi = <span class="type">Developer</span>()
+refi.<span class="function">build_web</span>()</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <a href="#about" class="scroll-indicator" aria-label="Scroll Down">
+                <i data-lucide="chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-number">01.</span> Tentang Saya</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text-column">
+                        <p class="about-paragraph">
+                            Saya adalah seorang pengembang perangkat lunak yang berdedikasi dan berbasis di Indonesia. Saya sangat tertarik dalam menjelajahi arsitektur backend, pemrograman konkurensi, dan otomatisasi menggunakan teknologi modern.
+                        </p>
+                        <p class="about-paragraph">
+                            Selama perjalanan saya di dunia pemrograman, saya telah mengembangkan berbagai macam aplikasi mulai dari sistem manajemen terdistribusi, integrasi bot otomatisasi untuk WhatsApp, hingga penerapan aplikasi berbasis cloud di platform PaaS. Saya selalu berusaha untuk mempelajari hal baru guna mengoptimalkan kinerja aplikasi yang saya kembangkan.
+                        </p>
+                        
+                        <!-- Quick Bio Details -->
+                        <ul class="bio-details">
+                            <li><span class="bio-label">Kota:</span> <span class="bio-value">Bandung, Jawa Barat</span></li>
+                            <li><span class="bio-label">Fokus:</span> <span class="bio-value">Frontend & Backend (Full-Stack)</span></li>
+                            <li><span class="bio-label">GitHub:</span> <span class="bio-value">mamad6969-hs</span></li>
+                            <li><span class="bio-label">LinkedIn:</span> <span class="bio-value">ahmdrfiwk</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-image-column">
+                        <div class="about-image-card">
+                            <img src="profile.png" alt="Ahmad Refi Widi Katibin" class="about-profile-img">
+                            <div class="about-image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Grid at the bottom -->
+                <div class="about-stats-container">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Repositori GitHub</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Pengikut GitHub</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Python</span>
+                            <span class="stat-label">Keahlian Utama</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">HTML/CSS</span>
+                            <span class="stat-label">Keahlian Utama</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-number">02.</span> Keahlian & Teknologi</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <p class="skills-intro">Berikut adalah beberapa teknologi dan alat yang sering saya gunakan dalam proyek saya:</p>
+                
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i data-lucide="code-2" class="category-icon purple"></i>
+                            <h3>Bahasa Pemrograman</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="skill-dot purple"></span> HTML5 & CSS3</li>
+                            <li><span class="skill-dot purple"></span> Python</li>
+                            <li><span class="skill-dot purple"></span> JavaScript (ES6+)</li>
+                            <li><span class="skill-dot purple"></span> Go (Golang)</li>
+                            <li><span class="skill-dot purple"></span> SQL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Frameworks & Runtimes -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i data-lucide="layers" class="category-icon blue"></i>
+                            <h3>Framework & Runtime</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="skill-dot blue"></span> Node.js</li>
+                            <li><span class="skill-dot blue"></span> Gin / Fiber (Go)</li>
+                            <li><span class="skill-dot blue"></span> Express.js</li>
+                            <li><span class="skill-dot blue"></span> RESTful API</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cloud & Tools -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <i data-lucide="cpu" class="category-icon aqua"></i>
+                            <h3>Cloud & Tools</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="skill-dot aqua"></span> MySQL</li>
+                            <li><span class="skill-dot aqua"></span> InfluxDB</li>
+                            <li><span class="skill-dot aqua"></span> Docker</li>
+                            <li><span class="skill-dot aqua"></span> GitHub</li>
+                            <li><span class="skill-dot aqua"></span> Visual Studio Code</li>
+                            <li><span class="skill-dot aqua"></span> Apache NetBeans</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-number">03.</span> Pengalaman</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jul 2026 - Sekarang</div>
+                        <div class="timeline-content">
+                            <h3>Internet of Things Intern</h3>
+                            <h4 class="company">PT. Hariff Daya Tunggal Engineering (Internship)</h4>
+                            <p>Fokus pada riset dan implementasi teknologi IoT, perancangan sirkuit perangkat keras (*embedded systems*), integrasi mikrokontroler, serta pengembangan sistem pemantauan data sensor secara real-time.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Okt 2025 - Jun 2026</div>
+                        <div class="timeline-content">
+                            <h3>Head of Department External</h3>
+                            <h4 class="company">Perhimpunan Mahasiswa Bandung Telkom University (Contract)</h4>
+                            <p>Memimpin departemen hubungan luar, menjalin kemitraan eksternal strategis, menyelenggarakan kegiatan komunikasi publik, serta memperkuat kolaborasi dan jejaring eksternal organisasi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Feb 2025 - Mar 2025</div>
+                        <div class="timeline-content">
+                            <h3>Logistics Staff</h3>
+                            <h4 class="company">PERFECT - Permib Freedom in Creativity (Seasonal)</h4>
+                            <p>Bertanggung jawab atas pengadaan, distribusi, manajemen perlengkapan teknis, serta koordinasi teknis operasional guna mendukung kelancaran pelaksanaan festival PERFECT.</p>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Nov 2022 - Feb 2023</div>
+                        <div class="timeline-content">
+                            <h3>Publication and Documentations Staff</h3>
+                            <h4 class="company">From 2 With Love 2023: Artwovesa (Seasonal)</h4>
+                            <p>Mendokumentasikan pertunjukan musik live panggung di Bandung, Jawa Barat. Bertanggung jawab atas dokumentasi visual, pengaturan pencahayaan kamera, komposisi, serta pasca-pemrosesan foto konser untuk media sosial acara.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-number">04.</span> Proyek Unggulan</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <!-- Project Filter Buttons -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud / DevOps</button>
+                    <button class="filter-btn" data-filter="photography">Fotografi</button>
+                </div>
+                
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+
+                    <!-- Project 6 (DevOps / IoT Cloud) -->
+                    <div class="project-card" data-category="cloud">
+                        <div class="project-card-image">
+                            <img src="grafana_turbine.png" alt="Wind Turbine Grafana Monitoring Dashboard" class="project-img">
+                            <div class="project-links">
+                                <a href="grafana_turbine.png" target="_blank" aria-label="Lihat Dashboard Fullsize"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-tag">IoT / Cloud Observability</span>
+                            <h3>Wind Turbine Monitoring Dashboard</h3>
+                            <p class="project-desc">Sistem dashboard Grafana real-time untuk memantau performa turbin angin dan sistem daya surya (hybrid). Melacak metrik kecepatan angin, tegangan sistem, daya pengisian baterai, serta suhu operasional menggunakan InfluxDB sebagai time-series database.</p>
+                            <ul class="project-tech-list">
+                                <li>Grafana</li>
+                                <li>InfluxDB</li>
+                                <li>IoT Monitoring</li>
+                                <li>Wind Turbine</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 (DevOps / IoT Solar) -->
+                    <div class="project-card" data-category="cloud">
+                        <div class="project-card-image">
+                            <img src="grafana_solar.png" alt="Solar System Grafana Monitoring Dashboard" class="project-img">
+                            <div class="project-links">
+                                <a href="grafana_solar.png" target="_blank" aria-label="Lihat Dashboard Fullsize"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-tag">IoT / Cloud Observability</span>
+                            <h3>Solar System Monitoring Dashboard</h3>
+                            <p class="project-desc">Sistem dashboard monitoring real-time untuk pembangkit listrik tenaga surya (hybrid). Memantau metrik daily solar production, tegangan baterai, input daya PV (Photo-Voltaic), backup grid power (PLN), serta status kesehatan baterai (SOC & SOH).</p>
+                            <ul class="project-tech-list">
+                                <li>Grafana</li>
+                                <li>InfluxDB</li>
+                                <li>IoT Monitoring</li>
+                                <li>Solar Energy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 (Photography) -->
+                    <div class="project-card" data-category="photography">
+                        <div class="project-card-image">
+                            <img src="photo1.png" alt="Concert Photography - Yura Yunita" class="project-img">
+                            <div class="project-links">
+                                <a href="photo1.png" target="_blank" aria-label="Lihat Foto Fullsize"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-tag">Fotografi / Dokumentasi</span>
+                            <h3>Photografer at F2WL ARTWOVESA - Yura Yunita</h3>
+                            <p class="project-desc">Hasil dokumentasi panggung acara live musik. Mengambil momen emosional Yura Yunita di bawah pencahayaan panggung dramatis dengan fokus tajam dan warna kontras tinggi.</p>
+                            <ul class="project-tech-list">
+                                <li>Concert</li>
+                                <li>Lighting</li>
+                                <li>Stage Photography</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 (Photography) -->
+                    <div class="project-card" data-category="photography">
+                        <div class="project-card-image">
+                            <img src="photo2.png" alt="Concert Photography - Afghan" class="project-img">
+                            <div class="project-links">
+                                <a href="photo2.png" target="_blank" aria-label="Lihat Foto Fullsize"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card-content">
+                            <span class="project-tag">Fotografi / Dokumentasi</span>
+                            <h3>Photografer at F2WL ARTWOVESA - Afghan</h3>
+                            <p class="project-desc">Karya fotografi konser yang menangkap gerakan panggung dinamis dari Afghan. Memanfaatkan efek bayangan dan arah cahaya spotlight untuk dramatisasi foto.</p>
+                            <ul class="project-tech-list">
+                                <li>Stage</li>
+                                <li>Portrait</li>
+                                <li>Spotlight</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container contact-container">
+                <div class="contact-info-panel">
+                    <div class="section-header">
+                        <h2 class="section-title"><span class="section-number">05.</span> Hubungi Saya</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <p class="contact-desc">
+                        Saya selalu terbuka untuk berdiskusi tentang proyek baru, kolaborasi open-source, atau sekadar berbagi pengetahuan mengenai web development. Silakan tinggalkan pesan!
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method-item">
+                            <i data-lucide="mail" class="contact-method-icon"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:ahmadrefi.widikatibin@gmail.com">ahmadrefi.widikatibin@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method-item">
+                            <i data-lucide="map-pin" class="contact-method-icon"></i>
+                            <div>
+                                <h4>Lokasi</h4>
+                                <p>Bandung, Jawa Barat, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links-footer">
+                        <a href="https://github.com/mamad6969-hs" target="_blank" class="social-link-btn" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ahmdrfiwk/" target="_blank" class="social-link-btn" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/ahmdrfiwk/" target="_blank" class="social-link-btn" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-panel">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subjek Pesan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan Anda</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                            Kirim Pesan <i data-lucide="send"></i>
+                        </button>
+                        
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bottom">
+        <div class="container footer-content">
+            <p>&copy; 2026 Ahmad Refi Widi Katibin. Dibuat dengan dedikasi penuh.</p>
+            <p>Built with HTML, CSS &amp; JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
