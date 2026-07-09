@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // MASUKKAN ACCESS KEY WEB3FORMS ANDA DI SINI
     // Anda bisa mendapatkan access key gratis dengan mendaftar di https://web3forms.com/
-    const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+    const WEB3FORMS_ACCESS_KEY = "8be47159-b517-4d90-95c1-b2762b23e4b6";
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
