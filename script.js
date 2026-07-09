@@ -159,33 +159,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const formStatus = document.getElementById('formStatus');
     const submitBtn = document.getElementById('submitBtn');
 
+    // MASUKKAN ACCESS KEY WEB3FORMS ANDA DI SINI
+    // Anda bisa mendapatkan access key gratis dengan mendaftar di https://web3forms.com/
+    const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            
+            // Clear previous status
+            formStatus.style.display = 'block';
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
             
             // Disable button and show loading state
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Sending... <span class="spinner"></span>';
             
-            // Simulate API request delay
-            setTimeout(() => {
-                formStatus.textContent = 'Your message has been sent successfully! Thank you.';
-                formStatus.className = 'form-status success';
+            const formData = new FormData(contactForm);
+            
+            // Jika access key belum diisi, tampilkan peringatan
+            if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+                formStatus.textContent = 'Form belum siap! Harap masukkan Web3Forms Access Key Anda di script.js.';
+                formStatus.className = 'form-status error';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message <i data-lucide="send"></i>';
+                lucide.createIcons();
+                return;
+            }
+            
+            formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(Object.fromEntries(formData))
+                });
                 
-                // Clear form fields
-                contactForm.reset();
+                const result = await response.json();
                 
+                if (response.status === 200 && result.success) {
+                    formStatus.textContent = 'Your message has been sent successfully! Thank you.';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent = result.message || 'Something went wrong. Please try again.';
+                    formStatus.className = 'form-status error';
+                }
+            } catch (error) {
+                formStatus.textContent = 'Could not connect to the server. Please check your internet connection.';
+                formStatus.className = 'form-status error';
+            } finally {
                 // Re-enable button
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = 'Send Message <i data-lucide="send"></i>';
                 lucide.createIcons();
-
+                
                 // Clear message after 5 seconds
                 setTimeout(() => {
                     formStatus.style.display = 'none';
                     formStatus.className = 'form-status';
                 }, 5000);
-            }, 1500);
+            }
         });
     }
 });
