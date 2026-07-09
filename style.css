@@ -1212,6 +1212,15 @@ svg.lucide {
         display: none;
     }
 
+    .section-header {
+        justify-content: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .section-line {
+        display: none;
+    }
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1225,6 +1234,12 @@ svg.lucide {
     .hero-subtitle {
         height: auto;
         min-height: 3rem;
+    }
+
+    .hero-ctas {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     .hero-description {
