@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="48" fill="#07070a" stroke="url(#grad)" stroke-width="4"/>
+  <text x="50" y="55" font-family="'Outfit', 'Inter', sans-serif" font-weight="800" font-size="28" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">
+    <tspan fill="#8b5cf6">&lt;</tspan>AR<tspan fill="#8b5cf6">/&gt;</tspan>
+  </text>
+</svg>

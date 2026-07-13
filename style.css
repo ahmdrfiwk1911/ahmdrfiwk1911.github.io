@@ -230,16 +230,13 @@ a {
 .logo-img {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1.5px solid var(--color-primary);
+    object-fit: contain;
     transition: var(--transition-fast);
 }
 
 .logo:hover .logo-img {
     transform: scale(1.1);
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.6));
 }
 
 .logo-accent {
