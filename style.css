@@ -218,25 +218,10 @@ a {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 800;
     color: #fff;
-}
-
-.logo-img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    transition: var(--transition-fast);
-}
-
-.logo:hover .logo-img {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.6));
 }
 
 .logo-accent {
